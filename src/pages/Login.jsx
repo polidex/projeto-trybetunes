@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
+import Loading from '../components/Loading';
 
 class Login extends React.Component {
   state = {
@@ -41,7 +42,7 @@ class Login extends React.Component {
         >
           Entrar
         </button>
-        { isLoading && <h1>Carregando...</h1> }
+        { isLoading && <Loading /> }
       </div>
     );
   }
